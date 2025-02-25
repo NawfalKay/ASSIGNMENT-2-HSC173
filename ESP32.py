@@ -11,6 +11,7 @@ wlan.connect("PUSTAKA_106b", "bacalah!")
 buzzer = machine.Pin(2, machine.Pin.OUT)
 
 def beep(times, duration=0.2, interval=0.2):
+
     for _ in range(times):
         buzzer.on()
         time.sleep(duration)
