@@ -4,6 +4,8 @@ from pymongo import MongoClient
 app = Flask(__name__)
 
 uri = "mongodb+srv://NAFWAL:PANFAL@cluster0.3tnvy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+
+
 client = MongoClient(uri)
 db = client["Phaethon"]
 collection = db["Esp32_sensor"]
