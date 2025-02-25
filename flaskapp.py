@@ -4,8 +4,6 @@ from pymongo import MongoClient
 app = Flask(__name__)
 
 uri = "mongodb+srv://NAFWAL:PANFAL@cluster0.3tnvy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
-
-
 client = MongoClient(uri)
 db = client["Phaethon"]
 collection = db["Esp32_sensor"]
@@ -36,5 +34,5 @@ def save_data():
         print("Error inserting to MongoDB:", error)
         return jsonify({"error": str(error)}), 500
 
-if __name__ == "_main_":
+if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
